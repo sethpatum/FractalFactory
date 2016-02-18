@@ -2,6 +2,8 @@
 void main() {
     
     vec2 position = v_tex_coord; // gets the location of the current pixel in the intervals [0..1] [0..1]
+    position.x -= xoff;
+    position.y -= yoff;
     
     position.y = 1.0 - position.y;
     
