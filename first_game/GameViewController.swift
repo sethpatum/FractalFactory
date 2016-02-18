@@ -30,6 +30,31 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         
     }
+    
+    // doing the zooming by pinching
+    // as being pinched, use the diff from previous to do incremental zooming
+    @IBAction func doingPinch(sender: UIPinchGestureRecognizer) {
+        let oldscale = scale.floatValue
+        let diff = Float(sender.scale) - oldscale
+        
+        
+        //BUGBUG:  Still this is not centering the image while it is scaled
+        xoff.floatValue = xoff.floatValue - psca.floatValue*diff/Float(frame_width)
+        yoff.floatValue = yoff.floatValue - psca.floatValue*diff/Float(frame_height)
+        
+        scale.floatValue = Float(sender.scale)
+        print("In Pinch", sender.scale)
+    }
+    
+    
+    // If finger is pressed for a long time, reset
+    @IBAction func doingReset(sender: UILongPressGestureRecognizer) {
+        print("Reset")
+        xoff.floatValue = 0
+        yoff.floatValue = 0
+        scale.floatValue = 1.0
+        psca.floatValue = 1.0
+    }
 
     override func shouldAutorotate() -> Bool {
         return true

@@ -1,5 +1,6 @@
 
 void main() {
+    int iterations = 125;
     
     vec2 position = v_tex_coord; // gets the location of the current pixel in the intervals [0..1] [0..1]
     position.x -= xoff;
@@ -9,7 +10,7 @@ void main() {
     
     vec2 z =  position;
     
-    z *= 2.0;
+    z *= 2.0/(psca*scale);
     z -= vec2(1.5,1.0);
     
     float aspectRatio = (u_sprite_size.x) / (u_sprite_size.y);
@@ -18,8 +19,7 @@ void main() {
     vec2 c = z;
     
     float it = 0.0; // Keep track of what iteration we reached
-    //for (int i = 0;i < iterations; ++i) {
-    for (float i = 0.0;i < iter; ++i) {
+    for (int i = 0;i < iterations; ++i) {
         // zn = zn-1 ^ 2 + c
         
         // (x + yi) ^ 2 = x ^ 2 - y ^ 2 + 2xyi
@@ -35,7 +35,7 @@ void main() {
     
     vec3 color = vec3(0.0,0.0,0.0); // initialize color to black
     
-    if (it < iter) {
+    if (it < float(iterations)) {
         color.x = sin(it / 3.0);
         color.y = cos(it / 6.0);
         color.z = cos(it / 12.0 + 3.14 / 4.0);
