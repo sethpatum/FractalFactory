@@ -10,9 +10,7 @@ void main() {
     vec2 z =  position;
     
     float zoom = psca*scale;
-    //if(zoom > 50000.0) {
-    //   zoom = 50000.0;
-    //}
+    
     
     z *= 2.0/zoom;
     z -= vec2(1.5,1.0);
@@ -22,28 +20,46 @@ void main() {
     
     vec2 c = z;
     
+    bool skipPoint = false;
+    
+    //     cardioid checking
+    if ((z.x + 1.0) * (z.x + 1.0) + z.y * z.y < 0.0625) {
+        skipPoint = true;
+    }
+    
+    //     period 2 checking
+    float q = (z.x - 0.25) * (z.x - 0.25) + z.y * z.y;
+    
+    if (q * (q + (z.x - 0.25)) < 0.25 * z.y * z.y) {
+        skipPoint = true;
+    }
+
+    vec3 color = vec3(0.0,0.0,0.0); // initialize color to black
+
+    
     float it = 0.0; // Keep track of what iteration we reached
-    for (int i = 0;i < iterations; ++i) {
-        // zn = zn-1 ^ 2 + c
-        
-        // (x + yi) ^ 2 = x ^ 2 - y ^ 2 + 2xyi
-        z = vec2(z.x * z.x - z.y * z.y, 2.0 * z.x * z.y);
-        z += c;
-        
-        if (dot(z,z) > 4.0) { // dot(z,z) == length(z) ^ 2 only faster to compute
-            break;
+    if(!skipPoint) {
+        for (int i = 0;i < iterations; ++i) {
+            // zn = zn-1 ^ 2 + c
+            
+            // (x + yi) ^ 2 = x ^ 2 - y ^ 2 + 2xyi
+            z = vec2(z.x * z.x - z.y * z.y, 2.0 * z.x * z.y);
+            z += c;
+            
+            if (dot(z,z) > 4.0) { // dot(z,z) == length(z) ^ 2 only faster to compute
+                break;
+            }
+            
+            it += 1.0;
         }
         
-        it += 1.0;
+        if (it < float(iterations)) {
+            color.x = sin(it / 3.0);
+            color.y = cos(it / 6.0);
+            color.z = cos(it / 12.0 + 3.14 / 4.0);
+        }
     }
     
-    vec3 color = vec3(0.0,0.0,0.0); // initialize color to black
-    
-    if (it < float(iterations)) {
-        color.x = sin(it / 3.0);
-        color.y = cos(it / 6.0);
-        color.z = cos(it / 12.0 + 3.14 / 4.0);
-    }
     
     gl_FragColor = vec4(color,1.0);
 }

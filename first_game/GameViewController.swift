@@ -58,15 +58,12 @@ class GameViewController: UIViewController {
         scrollStart = CGPoint(x:0.0, y:0.0)
     }
     
-    
-    @IBAction func doingSwipe(sender: UISwipeGestureRecognizer) {
-        print("Swipe")
-       // self.performSegueWithIdentifier("toMenuView", sender: self)
+    @IBAction func gotoHelp(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("MenuView") as UIViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(helpview) as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
-
+    
 
     override func shouldAutorotate() -> Bool {
         return true

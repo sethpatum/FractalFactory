@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  HelpViewController.swift
 //  first_game
 //
 //  Created by saman on 2/19/16.
@@ -8,10 +8,7 @@
 
 import UIKit
 
-var shaderfile : String = ""
-var helpview : String = ""
-
-class MenuViewController: UIViewController {
+class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +21,6 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Segue", segue.identifier)
-        shaderfile = segue.identifier! + ".fsh"
-        helpview   = segue.identifier!
-    }
 
     /*
     // MARK: - Navigation

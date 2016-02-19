@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -16,12 +17,44 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbh-49-5ol">
+                                <rect key="frame" x="20" y="28" width="76" height="51"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Q4c-aq-uTA" kind="show" identifier="" id="dry-KW-QUr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G17-R9-GfR">
+                                <rect key="frame" x="444" y="28" width="136" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Information&gt;">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoHelp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="f6Y-6t-4pQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="sbh-49-5ol" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" id="DrA-n3-8ZY"/>
+                            <constraint firstItem="G17-R9-GfR" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="10" id="ksX-AH-dF0"/>
+                            <constraint firstItem="sbh-49-5ol" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="pog-Ji-KK2"/>
+                            <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="qdc-x5-Mw9"/>
+                            <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="yLn-ZH-RoS"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="YXT-XQ-fzb" appends="YES" id="RWF-QD-Tje"/>
                             <outletCollection property="gestureRecognizers" destination="svy-Df-LdR" appends="YES" id="nUS-13-cK2"/>
-                            <outletCollection property="gestureRecognizers" destination="iqA-LX-f9b" appends="YES" id="YdQ-PG-yv2"/>
                         </connections>
                     </view>
                 </viewController>
@@ -36,12 +69,48 @@
                         <action selector="doingReset:" destination="BV1-FR-VrT" id="XWZ-ps-hL5"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="iqA-LX-f9b">
-                    <connections>
-                        <action selector="doingSwipe:" destination="BV1-FR-VrT" id="bnE-S3-gtf"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="292" y="451"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="krm-v1-TyJ">
+            <objects>
+                <viewController storyboardIdentifier="mandelbrot" id="SDE-rl-QzE" customClass="HelpViewController" customModule="first_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MVD-k5-fFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z5I-Tf-PJ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phx-NP-F2w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBm-DB-lOh">
+                                <rect key="frame" x="20" y="20" width="82" height="46"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="RC1-aN-cbc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mandelbrot Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoE-9m-OAC">
+                                <rect key="frame" x="222" y="57" width="157" height="21"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9n1-ne-sk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="1211"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="YK0-1l-HU3">
@@ -67,6 +136,30 @@
                                     <segue destination="BV1-FR-VrT" kind="show" identifier="mandelbrot" id="e1T-Qc-QrV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-vK-8AL">
+                                <rect key="frame" x="296" y="88" width="197" height="68"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Julia Set">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="juliaset" id="ruz-EP-c32"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DT-IL-AA9">
+                                <rect key="frame" x="56" y="219" width="197" height="68"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Sierpinski">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="sierpinski" id="gf7-Ko-U9v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -75,5 +168,48 @@
             </objects>
             <point key="canvasLocation" x="-403" y="451"/>
         </scene>
+        <!--Help View Controller-->
+        <scene sceneID="YON-sj-qmD">
+            <objects>
+                <viewController storyboardIdentifier="juliaset" id="tDh-sE-axf" customClass="HelpViewController" customModule="first_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PNj-dU-WHj"/>
+                        <viewControllerLayoutGuide type="bottom" id="YVb-fw-yLl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h6j-zQ-4LO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am4-FZ-UUZ">
+                                <rect key="frame" x="20" y="20" width="82" height="46"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="eIj-3E-FYV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Julia Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-YA-Aah">
+                                <rect key="frame" x="222" y="57" width="157" height="35"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGB-vu-ijk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="1211"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gf7-Ko-U9v"/>
+    </inferredMetricsTieBreakers>
 </document>
