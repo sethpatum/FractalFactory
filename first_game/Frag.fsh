@@ -1,6 +1,6 @@
 
 void main() {
-    int iterations = 125;
+    int iterations = 256;
     
     vec2 position = v_tex_coord; // gets the location of the current pixel in the intervals [0..1] [0..1]
     position.x -= xoff;
@@ -10,7 +10,12 @@ void main() {
     
     vec2 z =  position;
     
-    z *= 2.0/(psca*scale);
+    float zoom = psca*scale;
+    //if(zoom > 50000.0) {
+     //   zoom = 50000.0;
+    //}
+    
+    z *= 2.0/zoom;
     z -= vec2(1.5,1.0);
     
     float aspectRatio = (u_sprite_size.x) / (u_sprite_size.y);
