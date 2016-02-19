@@ -56,9 +56,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeY-ad-bkh">
-                                <rect key="frame" x="56" y="93" width="154" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <rect key="frame" x="56" y="93" width="197" height="61"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Mandelbrot">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
