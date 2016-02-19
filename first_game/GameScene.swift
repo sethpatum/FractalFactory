@@ -45,8 +45,10 @@ class GameScene: SKScene {
         let location = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         box.position = location
         
+        print("Loading", shaderfile)
+        
         // add a fragment shader
-        let pattern = SKShader(fileNamed: "Frag.fsh")
+        let pattern = SKShader(fileNamed: shaderfile)
         // next set the variables that is used in the fragment shader
         pattern.addUniform(xoff)
         pattern.addUniform(yoff)
