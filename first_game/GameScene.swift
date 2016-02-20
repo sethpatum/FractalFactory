@@ -19,17 +19,17 @@ var frame_height : CGFloat = 0.0 // height of the image
 
 
 func printpos() {
-    
     /*
+    
     var x : Float = 0.5
     var y : Float = 0.5
     x = x -  xoff.floatValue
     y = y - yoff.floatValue
     x = x/(psca.floatValue*scale.floatValue)
     y = y/(psca.floatValue*scale.floatValue)
+    x *= Float(frame_width/frame_height)
     
     print("off=","[",xoff.floatValue, ",", yoff.floatValue,"]", " scale=", scale.floatValue, " psca=", psca.floatValue, "  [",x,",",y,"]")
-
 */
 }
 
@@ -47,6 +47,8 @@ class GameScene: SKScene {
         
         print("Loading", shaderfile)
         
+        let spsz = SKUniform(name: "spsz", floatVector2: GLKVector2Make(Float(frame_width), Float(frame_height)))
+        
         // add a fragment shader
         let pattern = SKShader(fileNamed: shaderfile)
         // next set the variables that is used in the fragment shader
@@ -54,6 +56,7 @@ class GameScene: SKScene {
         pattern.addUniform(yoff)
         pattern.addUniform(psca)
         pattern.addUniform(scale)
+        pattern.addUniform(spsz)
         box.shader = pattern
         
         self.addChild(box)

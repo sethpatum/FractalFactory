@@ -39,8 +39,11 @@ class GameViewController: UIViewController {
         printpos()
         
         // (somewhat) centering the image while it is scaled
-        xoff.floatValue -=  (0.5/Float(frame_width)  - xoff.floatValue)*(Float(sender.scale)/oldscale - 1)
-        yoff.floatValue -=  (0.5/Float(frame_height) - yoff.floatValue)*(Float(sender.scale)/oldscale - 1)
+        xoff.floatValue +=  (xoff.floatValue-0.50)*(Float(sender.scale)/oldscale - 1.0)
+        yoff.floatValue +=  (yoff.floatValue+0.50)*(Float(sender.scale)/oldscale - 1.0)
+
+        
+
         
         scale.floatValue = Float(sender.scale)
         print("In Pinch", sender.scale)

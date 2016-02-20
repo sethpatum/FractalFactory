@@ -14,8 +14,8 @@ void main() {
     z *= 2.0/zoom;
     z -= vec2(1.0,1.0);
     
-    float aspectRatio = (u_sprite_size.x) / (u_sprite_size.y);
-    //z.x *= aspectRatio;
+    float aspectRatio = (spsz.x) / (spsz.y);
+    z.x *= aspectRatio;
     
     vec2 c = vec2(-0.76, 0.15);
     

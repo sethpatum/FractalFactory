@@ -25,12 +25,12 @@ void main() {
     z *= 2.0/zoom;
     z -= vec2(1.5,1.0);
     
-    float aspectRatio = (u_sprite_size.x) / (u_sprite_size.y);
-    //z.x *= aspectRatio;
+    float aspectRatio = (spsz.x) / (spsz.y);
+    z.x *= aspectRatio;
     
     vec2 c = vec2(0.18,0.18);
     
-    float it = 0.0; // Keep track of what iteration we reached
+   float it = 0.0; // Keep track of what iteration we reached
     
     for (int i = 0;i < iterations; ++i) {
         // zn = zn-1 ^ 2 + c
