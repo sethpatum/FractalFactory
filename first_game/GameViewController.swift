@@ -15,19 +15,19 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
        
-            // Configure the view.
-            let skView = self.view as! SKView
-            let scene = GameScene(size: skView.bounds.size)
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
+        // Configure the view.
+        let skView = self.view as! SKView
+        let scene = GameScene(size: skView.bounds.size)
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        
+        /* Sprite Kit applies additional optimizations to improve rendering performance */
+        skView.ignoresSiblingOrder = true
+        
+        /* Set the scale mode to scale to fit the window */
+        scene.scaleMode = .AspectFill
+        
+        skView.presentScene(scene)
         
     }
     
@@ -41,9 +41,6 @@ class GameViewController: UIViewController {
         // (somewhat) centering the image while it is scaled
         xoff.floatValue +=  (xoff.floatValue-0.50)*(Float(sender.scale)/oldscale - 1.0)
         yoff.floatValue +=  (yoff.floatValue+0.50)*(Float(sender.scale)/oldscale - 1.0)
-
-        
-
         
         scale.floatValue = Float(sender.scale)
         print("In Pinch", sender.scale)

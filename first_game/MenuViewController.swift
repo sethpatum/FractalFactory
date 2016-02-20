@@ -28,6 +28,13 @@ class MenuViewController: UIViewController {
         print("Segue", segue.identifier)
         shaderfile = segue.identifier! + ".fsh"
         helpview   = segue.identifier!
+        
+        // reset the position
+        xoff.floatValue = 0
+        yoff.floatValue = 0
+        scale.floatValue = 1.0
+        psca.floatValue = 1.0
+        scrollStart = CGPoint(x:0.0, y:0.0)
     }
 
     /*
