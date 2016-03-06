@@ -42,7 +42,7 @@
                                     <action selector="gotoHelp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="f6Y-6t-4pQ"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-2" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
                                 <rect key="frame" x="66" y="86" width="509" height="31"/>
                                 <connections>
                                     <action selector="Xslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="1sY-SX-Lxq"/>
@@ -60,7 +60,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-2" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
                                 <rect key="frame" x="66" y="124" width="509" height="31"/>
                                 <connections>
                                     <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
