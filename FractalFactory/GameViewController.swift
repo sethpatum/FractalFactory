@@ -120,13 +120,18 @@ class GameViewController: UIViewController {
         psca.floatValue = 1.0
         scrollStart = CGPoint(x:0.0, y:0.0)
         
-        xslider.floatValue = 0.5
-        SliderX.value = 0.5
-        LabelXval.text = String(0.5)
-        yslider.floatValue = 0.5
-        SliderY.value = 0.5
-        LabelYval.text = String(0.5)
-
+        
+        xslider.floatValue = 0.32
+        SliderX.value = 0.32
+        LabelXval.text = String(0.32)
+        
+        yslider.floatValue = 0.44
+        SliderY.value = 0.44
+        LabelYval.text = String(0.44)
+        
+        expslider.floatValue = 0.0
+        SliderExp.value = 0.0
+        LabelExpval.text = String(0.0)
     }
     
     @IBAction func gotoHelp(sender: AnyObject) {
