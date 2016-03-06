@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q4c-aq-uTA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q4c-aq-uTA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -42,6 +42,18 @@
                                     <action selector="gotoHelp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="f6Y-6t-4pQ"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
+                                <rect key="frame" x="18" y="86" width="557" height="31"/>
+                                <connections>
+                                    <action selector="Xslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="1sY-SX-Lxq"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
+                                <rect key="frame" x="18" y="124" width="557" height="31"/>
+                                <connections>
+                                    <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -57,6 +69,10 @@
                             <outletCollection property="gestureRecognizers" destination="svy-Df-LdR" appends="YES" id="nUS-13-cK2"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="SliderX" destination="lA2-O8-x7a" id="IZd-ab-mRq"/>
+                        <outlet property="SliderY" destination="keZ-iy-ImW" id="Th0-zq-5zl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
                 <pinchGestureRecognizer id="YXT-XQ-fzb">
@@ -168,6 +184,18 @@
                                 <color key="shadowColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-P8-REn">
+                                <rect key="frame" x="296" y="220" width="197" height="68"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Custom">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="Simple" id="8zg-1t-CLj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -221,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gf7-Ko-U9v"/>
+        <segue reference="8zg-1t-CLj"/>
     </inferredMetricsTieBreakers>
 </document>

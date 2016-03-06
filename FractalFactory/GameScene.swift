@@ -13,6 +13,10 @@ let psca = SKUniform(name:"psca", float:1.0) // Previously set scale factor.
 let xoff = SKUniform(name:"xoff", float:0) // moved in x direction
 let yoff = SKUniform(name:"yoff", float:0) // moved in y direction
 
+let xslider = SKUniform(name:"xslider", float:0)
+let yslider = SKUniform(name:"yslider", float:0) 
+
+
 var scrollStart : CGPoint = CGPoint(x:0.0, y:0.0) // start point of scrolling
 var frame_width : CGFloat = 0.0 // the width of the image
 var frame_height : CGFloat = 0.0 // height of the image
@@ -57,6 +61,8 @@ class GameScene: SKScene {
         pattern.addUniform(psca)
         pattern.addUniform(scale)
         pattern.addUniform(spsz)
+        pattern.addUniform(xslider)
+        pattern.addUniform(yslider)
         box.shader = pattern
         
         self.addChild(box)

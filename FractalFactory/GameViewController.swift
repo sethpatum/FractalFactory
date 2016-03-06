@@ -10,7 +10,10 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
+    
+    @IBOutlet weak var SliderY: UISlider!
+    @IBOutlet weak var SliderX: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +32,28 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
+        print("SF", shaderfile)
+        
+        if shaderfile == "Simple.fsh" {
+            SliderX.hidden = false
+            SliderY.hidden = false
+            
+        } else {
+            SliderX.hidden = true
+            SliderY.hidden = true
+        }
+        
     }
+    
+    
+    @IBAction func Xslider(sender: UISlider) {
+        xslider.floatValue = Float(sender.value)
+    }
+    
+    @IBAction func Yslider(sender: UISlider) {
+        yslider.floatValue = Float(sender.value)
+    }
+    
     
     // doing the zooming by pinching
     // as being pinched, use the diff from previous to do incremental zooming
