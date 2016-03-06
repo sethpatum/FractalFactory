@@ -17,7 +17,7 @@ void main() {
     float aspectRatio = (spsz.x) / (spsz.y);
     z.x *= aspectRatio;
     
-    vec2 c = vec2(-0.76, 0.15);
+    vec2 c = vec2(xslider, yslider);
     
     
     float it = 0.0; // Keep track of what iteration we reached

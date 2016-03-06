@@ -11,8 +11,10 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet weak var SliderY: UISlider!
     @IBOutlet weak var SliderX: UISlider!
+    @IBOutlet weak var SliderY: UISlider!
+    @IBOutlet weak var LabelX: UILabel!
+    @IBOutlet weak var LabelY: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +36,16 @@ class GameViewController: UIViewController {
         
         print("SF", shaderfile)
         
-        if shaderfile == "Simple.fsh" {
+        if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh" {
             SliderX.hidden = false
             SliderY.hidden = false
-            
+            LabelX.hidden = false
+            LabelY.hidden = false
         } else {
             SliderX.hidden = true
             SliderY.hidden = true
+            LabelX.hidden = true
+            LabelY.hidden = true
         }
         
     }

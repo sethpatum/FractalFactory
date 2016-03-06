@@ -42,14 +42,26 @@
                                     <action selector="gotoHelp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="f6Y-6t-4pQ"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
-                                <rect key="frame" x="18" y="86" width="557" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
+                                <rect key="frame" x="66" y="86" width="509" height="31"/>
                                 <connections>
                                     <action selector="Xslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="1sY-SX-Lxq"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
-                                <rect key="frame" x="18" y="124" width="557" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-VW-afz">
+                                <rect key="frame" x="32" y="90" width="42" height="34"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVT-ue-1Mm">
+                                <rect key="frame" x="32" y="124" width="42" height="34"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
+                                <rect key="frame" x="66" y="124" width="509" height="31"/>
                                 <connections>
                                     <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
                                 </connections>
@@ -59,9 +71,19 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sbh-49-5ol" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" id="DrA-n3-8ZY"/>
+                            <constraint firstItem="vVL-VW-afz" firstAttribute="top" secondItem="sbh-49-5ol" secondAttribute="bottom" constant="11" id="Ejl-63-vF0"/>
+                            <constraint firstItem="lA2-O8-x7a" firstAttribute="top" secondItem="sbh-49-5ol" secondAttribute="bottom" constant="7" id="GgB-kS-1gx"/>
+                            <constraint firstItem="WVT-ue-1Mm" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="12" id="Gy5-Fk-0aj"/>
+                            <constraint firstItem="keZ-iy-ImW" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" id="YVp-CA-Anz"/>
+                            <constraint firstItem="vVL-VW-afz" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="12" id="bCz-TN-fgI"/>
+                            <constraint firstItem="lA2-O8-x7a" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="48" id="cJu-wE-FtC"/>
+                            <constraint firstItem="WVT-ue-1Mm" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" id="dWM-t2-bTQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="keZ-iy-ImW" secondAttribute="trailing" constant="7" id="fqm-Cg-gYJ"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="10" id="ksX-AH-dF0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="7" id="ldg-p9-Ipz"/>
                             <constraint firstItem="sbh-49-5ol" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="pog-Ji-KK2"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="qdc-x5-Mw9"/>
+                            <constraint firstItem="keZ-iy-ImW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="48" id="x4O-e7-pCl"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="yLn-ZH-RoS"/>
                         </constraints>
                         <connections>
@@ -70,6 +92,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="LabelX" destination="vVL-VW-afz" id="SZi-FS-5kw"/>
+                        <outlet property="LabelY" destination="WVT-ue-1Mm" id="2fO-yr-F8G"/>
                         <outlet property="SliderX" destination="lA2-O8-x7a" id="IZd-ab-mRq"/>
                         <outlet property="SliderY" destination="keZ-iy-ImW" id="Th0-zq-5zl"/>
                     </connections>
@@ -184,18 +208,6 @@
                                 <color key="shadowColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-P8-REn">
-                                <rect key="frame" x="296" y="220" width="197" height="68"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Custom">
-                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" identifier="Simple" id="8zg-1t-CLj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -249,6 +261,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8zg-1t-CLj"/>
+        <segue reference="ruz-EP-c32"/>
     </inferredMetricsTieBreakers>
 </document>
