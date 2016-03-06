@@ -22,8 +22,8 @@ void main() {
     float zoom = psca*scale;
     
     
-    z *= 2.0/zoom;
-    z -= vec2(1.0,1.0);
+    z *= 2.2/zoom;
+    z -= vec2(1.0, 1.1);
     
     float aspectRatio = (spsz.x) / (spsz.y);
     z.x *= aspectRatio;
@@ -37,11 +37,11 @@ void main() {
         
         // (x + yi) ^ 2 = x ^ 2 - y ^ 2 + 2xyi
         z = vec2(z.x * z.x - z.y * z.y, 2.0 * z.x * z.y);
-        z += c * powc(z,-2.0);
+        z += c * powc(z,expslider);
         
-        if (dot(z,z) > 4.0) { // dot(z,z) == length(z) ^ 2 only faster to compute
-            break;
-        }
+       if (dot(z,z) > 4.0) { // dot(z,z) == length(z) ^ 2 only faster to compute
+           break;
+       }
         
         it += 1.0;
     }

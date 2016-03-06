@@ -14,7 +14,8 @@ let xoff = SKUniform(name:"xoff", float:0) // moved in x direction
 let yoff = SKUniform(name:"yoff", float:0) // moved in y direction
 
 let xslider = SKUniform(name:"xslider", float:0)
-let yslider = SKUniform(name:"yslider", float:0) 
+let yslider = SKUniform(name:"yslider", float:0)
+let expslider = SKUniform(name: "expslider", float:-1)
 
 
 var scrollStart : CGPoint = CGPoint(x:0.0, y:0.0) // start point of scrolling
@@ -63,6 +64,7 @@ class GameScene: SKScene {
         pattern.addUniform(spsz)
         pattern.addUniform(xslider)
         pattern.addUniform(yslider)
+        pattern.addUniform(expslider)
         box.shader = pattern
         
         self.addChild(box)

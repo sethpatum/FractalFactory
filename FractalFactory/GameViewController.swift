@@ -13,8 +13,13 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var SliderX: UISlider!
     @IBOutlet weak var SliderY: UISlider!
+    @IBOutlet weak var SliderExp: UISlider!
     @IBOutlet weak var LabelX: UILabel!
     @IBOutlet weak var LabelY: UILabel!
+    @IBOutlet weak var LabelExp: UILabel!
+    @IBOutlet weak var LabelXval: UILabel!
+    @IBOutlet weak var LabelYval: UILabel!
+    @IBOutlet weak var LabelExpval: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,31 +39,60 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
-        print("SF", shaderfile)
-        
         if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh" {
             SliderX.hidden = false
             SliderY.hidden = false
             LabelX.hidden = false
             LabelY.hidden = false
+            LabelXval.hidden = false
+            LabelYval.hidden = false
+  
+            if shaderfile == "sierpinski.fsh" {
+                SliderExp.hidden = false
+                LabelExp.hidden = false
+                LabelExpval.hidden = false
+            } else {
+                SliderExp.hidden = true
+                LabelExp.hidden = true
+                LabelExpval.hidden = true
+            }
         } else {
             SliderX.hidden = true
             SliderY.hidden = true
+            SliderExp.hidden = true
             LabelX.hidden = true
             LabelY.hidden = true
+            LabelXval.hidden = true
+            LabelYval.hidden = true
+            LabelExp.hidden = true
+            LabelExpval.hidden = true
+            print("Here 3")
         }
+        
+        LabelXval.text = String(SliderX.value)
+        LabelYval.text = String(SliderY.value)
+        LabelExpval.text = String(SliderExp.value)
+        xslider.floatValue = SliderX.value
+        yslider.floatValue = SliderY.value
+        expslider.floatValue = SliderExp.value
         
     }
     
     
     @IBAction func Xslider(sender: UISlider) {
         xslider.floatValue = Float(sender.value)
+        LabelXval.text = String(sender.value)
     }
     
     @IBAction func Yslider(sender: UISlider) {
         yslider.floatValue = Float(sender.value)
+        LabelYval.text = String(sender.value)
     }
     
+    @IBAction func Expslider(sender: UISlider) {
+        expslider.floatValue = Float(sender.value)
+        LabelExpval.text = String(sender.value)
+    }
     
     // doing the zooming by pinching
     // as being pinched, use the diff from previous to do incremental zooming
@@ -85,6 +119,14 @@ class GameViewController: UIViewController {
         scale.floatValue = 1.0
         psca.floatValue = 1.0
         scrollStart = CGPoint(x:0.0, y:0.0)
+        
+        xslider.floatValue = 0.5
+        SliderX.value = 0.5
+        LabelXval.text = String(0.5)
+        yslider.floatValue = 0.5
+        SliderY.value = 0.5
+        LabelYval.text = String(0.5)
+
     }
     
     @IBAction func gotoHelp(sender: AnyObject) {
