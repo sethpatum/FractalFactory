@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F20725481C7738C00002A84D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20725471C7738C00002A84D /* MenuViewController.swift */; };
 		F207254A1C7751E10002A84D /* mandelbrot.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F20725491C7751E10002A84D /* mandelbrot.fsh */; };
-		F207254C1C77BFAE0002A84D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207254B1C77BFAE0002A84D /* HelpViewController.swift */; };
+		F207254C1C77BFAE0002A84D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207254B1C77BFAE0002A84D /* UIViewController.swift */; };
 		F207254E1C77D0E30002A84D /* juliaset.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F207254D1C77D0E30002A84D /* juliaset.fsh */; };
 		F20725501C77D4930002A84D /* sierpinski.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F207254F1C77D4930002A84D /* sierpinski.fsh */; };
 		F20725521C7A7C9A0002A84D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F20725511C7A7C9A0002A84D /* Default-568h@2x.png */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		F20725471C7738C00002A84D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F20725491C7751E10002A84D /* mandelbrot.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = mandelbrot.fsh; sourceTree = "<group>"; };
-		F207254B1C77BFAE0002A84D /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		F207254B1C77BFAE0002A84D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F207254D1C77D0E30002A84D /* juliaset.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = juliaset.fsh; sourceTree = "<group>"; };
 		F207254F1C77D4930002A84D /* sierpinski.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = sierpinski.fsh; sourceTree = "<group>"; };
 		F20725511C7A7C9A0002A84D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				F2C4C1AB1C754FAC0003B54E /* Simple.fsh */,
 				F2C4C1791C75470A0003B54E /* GameViewController.swift */,
 				F2C4C17B1C75470A0003B54E /* Main.storyboard */,
-				F207254B1C77BFAE0002A84D /* HelpViewController.swift */,
+				F207254B1C77BFAE0002A84D /* UIViewController.swift */,
 				F20725471C7738C00002A84D /* MenuViewController.swift */,
 				F2C4C17E1C75470A0003B54E /* Assets.xcassets */,
 				F2C4C1801C75470A0003B54E /* LaunchScreen.storyboard */,
@@ -298,7 +298,7 @@
 				F2C4C17A1C75470A0003B54E /* GameViewController.swift in Sources */,
 				F2C4C1741C75470A0003B54E /* AppDelegate.swift in Sources */,
 				F20725481C7738C00002A84D /* MenuViewController.swift in Sources */,
-				F207254C1C77BFAE0002A84D /* HelpViewController.swift in Sources */,
+				F207254C1C77BFAE0002A84D /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

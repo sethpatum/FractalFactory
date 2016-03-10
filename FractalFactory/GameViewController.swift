@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
-        if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh" {
+        if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh"  || shaderfile == "Simple.fsh" {
             SliderX.hidden = false
             SliderY.hidden = false
             LabelX.hidden = false
@@ -47,7 +47,7 @@ class GameViewController: UIViewController {
             LabelXval.hidden = false
             LabelYval.hidden = false
   
-            if shaderfile == "sierpinski.fsh" {
+            if shaderfile == "sierpinski.fsh" || shaderfile == "Simple.fsh" {
                 SliderExp.hidden = false
                 LabelExp.hidden = false
                 LabelExpval.hidden = false
