@@ -54,13 +54,13 @@
                                     <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-VW-afz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.r" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-VW-afz">
                                 <rect key="frame" x="32" y="90" width="42" height="34"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVT-ue-1Mm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C.i" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVT-ue-1Mm">
                                 <rect key="frame" x="32" y="124" width="42" height="34"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -207,7 +207,7 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="RC1-aN-cbc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mandelbrot Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoE-9m-OAC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Mandelbrot Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoE-9m-OAC">
                                 <rect key="frame" x="222" y="57" width="157" height="21"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -215,8 +215,35 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-f1-Spr">
+                                <rect key="frame" x="20" y="215" width="560" height="213"/>
+                                <mutableString key="text">Starting X is always 0, which gets squared and then A, which is a variable (imaginary number) is added. After this, the resulting value is then plugged back into the function to go through the same process again. Points that stay below a magnitude of 2 are trapped, but the other ones will have a magnitude larger than 2 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color shade determines how fast the point escapes. You repeat this process with different A values.  
+</mutableString>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="X = X   + A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-Dz-EeQ">
+                                <rect key="frame" x="266" y="163" width="86" height="44"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-fo-hy6">
+                                <rect key="frame" x="309" y="152" width="26" height="37.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3bd-Dz-EeQ" firstAttribute="top" secondItem="SoE-9m-OAC" secondAttribute="bottom" constant="85" id="UO0-YV-y5j"/>
+                            <constraint firstItem="Eqz-f1-Spr" firstAttribute="trailing" secondItem="phx-NP-F2w" secondAttribute="trailingMargin" id="W3K-Bt-7n9"/>
+                            <constraint firstItem="JAM-fo-hy6" firstAttribute="top" secondItem="SoE-9m-OAC" secondAttribute="bottom" constant="74" id="h5r-8o-CW2"/>
+                            <constraint firstItem="Eqz-f1-Spr" firstAttribute="leading" secondItem="phx-NP-F2w" secondAttribute="leadingMargin" id="j73-6p-kOG"/>
+                            <constraint firstItem="Eqz-f1-Spr" firstAttribute="top" secondItem="3bd-Dz-EeQ" secondAttribute="bottom" constant="8" id="jU9-08-XzK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9n1-ne-sk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,7 +341,7 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="eIj-3E-FYV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Julia Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-YA-Aah">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Julia Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-YA-Aah">
                                 <rect key="frame" x="222" y="57" width="157" height="35"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,8 +349,36 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRb-WE-m9n">
+                                <rect key="frame" x="20" y="236" width="560" height="213"/>
+                                <mutableString key="text">Y is the variable that gets squared in the equation in this instance and C is the constant. The output of the equation is then inputted back into the equation and the process is repeated. Depending on what value of C is chosen the fractal created will be different. 
+Points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
+</mutableString>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Y = Y   + C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZo-fu-7xc">
+                                <rect key="frame" x="257" y="167.5" width="86" height="44"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0N-xw-qI5">
+                                <rect key="frame" x="300" y="156" width="26" height="37.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SRb-WE-m9n" firstAttribute="leading" secondItem="h6j-zQ-4LO" secondAttribute="leadingMargin" id="6Y4-jq-OrK"/>
+                            <constraint firstItem="SRb-WE-m9n" firstAttribute="trailing" secondItem="h6j-zQ-4LO" secondAttribute="trailingMargin" id="RID-dB-iVi"/>
+                            <constraint firstItem="IZo-fu-7xc" firstAttribute="top" secondItem="CAF-YA-Aah" secondAttribute="bottom" constant="75.5" id="VUS-Wz-yyv"/>
+                            <constraint firstItem="v0N-xw-qI5" firstAttribute="top" secondItem="CAF-YA-Aah" secondAttribute="bottom" constant="64" id="c2K-B1-WUz"/>
+                            <constraint firstItem="SRb-WE-m9n" firstAttribute="top" secondItem="IZo-fu-7xc" secondAttribute="bottom" constant="24.5" id="lHk-T4-gn1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGB-vu-ijk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,16 +409,65 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="sHC-Gx-YrD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sierpinski Julia Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1r-Bd-VI0">
-                                <rect key="frame" x="213" y="57" width="176" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sierpinski Version of the Julia Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1r-Bd-VI0">
+                                <rect key="frame" x="147" y="57" width="309" height="35"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Y = Y   + C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My4-Fc-AxN">
+                                <rect key="frame" x="257" y="149.5" width="86" height="44"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-KK-oi5">
+                                <rect key="frame" x="340" y="152" width="86" height="44"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWG-AI-2Qe">
+                                <rect key="frame" x="300" y="138" width="26" height="37.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-WW-0R9">
+                                <rect key="frame" x="362" y="152" width="26" height="37.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVK-DW-gox">
+                                <rect key="frame" x="349" y="163" width="86" height="44"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-I0-BKQ">
+                                <rect key="frame" x="20" y="215" width="560" height="281"/>
+                                <mutableString key="text">The Sierpinski version of the Julia set starts of the same with Y having the same role of being the variable that is squared in the first half of the equation. But in this set the C variable is divided by Y^A (A is also controled by the user), so the fractal changes based on the A value as well. Similiarly to the Julia set points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
+
+</mutableString>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="O3J-I0-BKQ" firstAttribute="leading" secondItem="YhT-6t-ZtT" secondAttribute="leadingMargin" id="3Ui-VQ-wgA"/>
+                            <constraint firstItem="My4-Fc-AxN" firstAttribute="top" secondItem="Z1r-Bd-VI0" secondAttribute="bottom" constant="57.5" id="NCj-oY-Y9a"/>
+                            <constraint firstItem="O3J-I0-BKQ" firstAttribute="top" secondItem="PVK-DW-gox" secondAttribute="bottom" constant="8" id="XZM-yX-255"/>
+                            <constraint firstItem="O3J-I0-BKQ" firstAttribute="trailing" secondItem="YhT-6t-ZtT" secondAttribute="trailingMargin" id="b3M-CI-9vW"/>
+                            <constraint firstItem="Sju-KK-oi5" firstAttribute="top" secondItem="Z1r-Bd-VI0" secondAttribute="bottom" constant="60" id="clz-aI-MF0"/>
+                            <constraint firstItem="J5T-WW-0R9" firstAttribute="top" secondItem="Z1r-Bd-VI0" secondAttribute="bottom" constant="60" id="dQo-go-xst"/>
+                            <constraint firstItem="PVK-DW-gox" firstAttribute="top" secondItem="Z1r-Bd-VI0" secondAttribute="bottom" constant="71" id="fCG-04-A0w"/>
+                            <constraint firstItem="iWG-AI-2Qe" firstAttribute="top" secondItem="Z1r-Bd-VI0" secondAttribute="bottom" constant="46" id="xjA-E8-DPm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wn4-XV-0Tb" userLabel="First Responder" sceneMemberID="firstResponder"/>

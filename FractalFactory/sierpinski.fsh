@@ -34,7 +34,7 @@ void main() {
    int it = 0; // Keep track of what iteration we reached
     
     for (int i = 0;i < iterations; ++i) {
-        // zn = zn-1 ^ 2 + c
+        // zn = zn-1 ^ 2 + c/zn^expval
         
         // (x + yi) ^ 2 = x ^ 2 - y ^ 2 + 2xyi
         z = vec2(z.x * z.x - z.y * z.y, 2.0 * z.x * z.y);
