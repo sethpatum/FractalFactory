@@ -11,20 +11,26 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
+    // The sliders
     @IBOutlet weak var SliderX: UISlider!
     @IBOutlet weak var SliderY: UISlider!
     @IBOutlet weak var SliderExp: UISlider!
+    
+    // Labels that name the sliders
     @IBOutlet weak var LabelX: UILabel!
     @IBOutlet weak var LabelY: UILabel!
     @IBOutlet weak var LabelExp: UILabel!
     
+    // textfields that displays/adjusts the values
     @IBOutlet weak var TextX: UITextField!
     @IBOutlet weak var TextY: UITextField!
     @IBOutlet weak var TextExp: UITextField!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
        
         // Configure the view.
         let skView = self.view as! SKView
@@ -41,6 +47,7 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
         
         
+        // when to have sliders (plus labels and textfileds) on and off
         if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh"  || shaderfile == "Simple.fsh" {
             SliderX.hidden = false
             SliderY.hidden = false
@@ -70,6 +77,7 @@ class GameViewController: UIViewController {
             TextX.hidden = true
         }
         
+        // Slides have the initial value
         TextY.text = String(SliderY.value)
         TextExp.text = String(SliderExp.value)
         xslider.floatValue = SliderX.value
@@ -80,6 +88,7 @@ class GameViewController: UIViewController {
     }
     
     
+    // slider moved
     @IBAction func Xslider(sender: UISlider) {
         xslider.floatValue = Float(sender.value)
         TextX.text = String(sender.value)
@@ -96,7 +105,7 @@ class GameViewController: UIViewController {
     }
     
     
-    
+    // textfiled updated
     @IBAction func Xtextbox(sender: UITextField) {
         xslider.floatValue = Float(sender.text!)!
         SliderX.value = xslider.floatValue
@@ -155,6 +164,8 @@ class GameViewController: UIViewController {
         TextExp.text = String(0.0)
     }
     
+    
+    // goto help
     @IBAction func gotoHelp(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier(helpview) as UIViewController
@@ -162,7 +173,7 @@ class GameViewController: UIViewController {
     }
     
     
-    // Check for negative or positive decimal value
+    // Check for negative or positive decimal value in the textfield
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if (string.characters.count == 0) {
             return true
