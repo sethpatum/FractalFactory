@@ -42,13 +42,13 @@
                                     <action selector="gotoHelp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="f6Y-6t-4pQ"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.32000000000000001" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
+                            <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.32000000000000001" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
                                 <rect key="frame" x="66" y="86" width="430" height="31"/>
                                 <connections>
                                     <action selector="Xslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="1sY-SX-Lxq"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.44" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
+                            <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.44" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
                                 <rect key="frame" x="66" y="124" width="430" height="31"/>
                                 <connections>
                                     <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
@@ -72,13 +72,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-8" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-Ff-SZk">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-8" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-Ff-SZk">
                                 <rect key="frame" x="66" y="159" width="430" height="31"/>
                                 <connections>
                                     <action selector="Expslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="uee-CF-cHf"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-hz-yaB">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-hz-yaB">
                                 <rect key="frame" x="508" y="86" width="72" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -88,17 +88,7 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="h5b-eU-fmP"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Iy-sQ-tO2">
-                                <rect key="frame" x="508" y="126" width="72" height="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="Ytextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="VyZ-Iu-Ffy"/>
-                                    <outlet property="delegate" destination="BV1-FR-VrT" id="L5S-fQ-RAE"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-Q2-3qe">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-Q2-3qe">
                                 <rect key="frame" x="508" y="159" width="72" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -107,6 +97,16 @@
                                     <action selector="Exptextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="MuY-3o-2uh"/>
                                     <action selector="Xtextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="YBR-UV-sPg"/>
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="mfg-py-KFl"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Iy-sQ-tO2">
+                                <rect key="frame" x="508" y="126" width="72" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="Ytextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="VyZ-Iu-Ffy"/>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="L5S-fQ-RAE"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -137,6 +137,7 @@
                             <constraint firstItem="eNx-Q2-3qe" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="eTa-14-j9g"/>
                             <constraint firstItem="EC2-hz-yaB" firstAttribute="leading" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="4" id="fh1-Cc-wHs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="keZ-iy-ImW" secondAttribute="trailing" constant="7" id="fqm-Cg-gYJ"/>
+                            <constraint firstItem="WVT-ue-1Mm" firstAttribute="top" secondItem="lA2-O8-x7a" secondAttribute="bottom" constant="8" id="kSZ-nn-hHr"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="10" id="ksX-AH-dF0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="7" id="ldg-p9-Ipz"/>
                             <constraint firstItem="sbh-49-5ol" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="pog-Ji-KK2"/>
@@ -149,6 +150,7 @@
                             <mask key="constraints">
                                 <exclude reference="dt1-Tm-ijt"/>
                                 <exclude reference="ldg-p9-Ipz"/>
+                                <exclude reference="kSZ-nn-hHr"/>
                                 <exclude reference="fqm-Cg-gYJ"/>
                                 <exclude reference="Ch6-Qr-DWz"/>
                                 <exclude reference="fh1-Cc-wHs"/>
