@@ -43,13 +43,13 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.32000000000000001" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA2-O8-x7a">
-                                <rect key="frame" x="66" y="86" width="458" height="31"/>
+                                <rect key="frame" x="66" y="86" width="430" height="31"/>
                                 <connections>
                                     <action selector="Xslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="1sY-SX-Lxq"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.44" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-iy-ImW">
-                                <rect key="frame" x="66" y="124" width="458" height="31"/>
+                                <rect key="frame" x="66" y="124" width="430" height="31"/>
                                 <connections>
                                     <action selector="Yslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="tbg-b7-bfW"/>
                                 </connections>
@@ -72,76 +72,76 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-Rd-hbK">
-                                <rect key="frame" x="525" y="90" width="47" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="iWy-pv-WYl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00X-Ud-cFP">
-                                <rect key="frame" x="525" y="128" width="47" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="VMN-Sc-yPT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-8" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-Ff-SZk">
-                                <rect key="frame" x="66" y="159" width="458" height="31"/>
+                                <rect key="frame" x="66" y="159" width="430" height="31"/>
                                 <connections>
                                     <action selector="Expslider:" destination="BV1-FR-VrT" eventType="valueChanged" id="uee-CF-cHf"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzS-iu-dFN">
-                                <rect key="frame" x="525" y="167" width="47" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Anu-ms-16w"/>
-                                    <constraint firstAttribute="width" constant="50" id="cqq-hA-vY9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="12"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-hz-yaB">
+                                <rect key="frame" x="508" y="86" width="72" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Anu-ms-16w"/>
-                                    </mask>
-                                </variation>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="Xtextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="bXa-Nz-KmP"/>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="h5b-eU-fmP"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Iy-sQ-tO2">
+                                <rect key="frame" x="508" y="126" width="72" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="Ytextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="VyZ-Iu-Ffy"/>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="L5S-fQ-RAE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-Q2-3qe">
+                                <rect key="frame" x="508" y="159" width="72" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="Exptextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="MuY-3o-2uh"/>
+                                    <action selector="Xtextbox:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="YBR-UV-sPg"/>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="mfg-py-KFl"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wzS-iu-dFN" secondAttribute="trailing" constant="8" id="3Kg-9F-Vcu"/>
-                            <constraint firstItem="Tw8-Ff-SZk" firstAttribute="top" secondItem="WVT-ue-1Mm" secondAttribute="bottom" constant="1" id="3Sv-j0-mRT"/>
-                            <constraint firstItem="wzS-iu-dFN" firstAttribute="leading" secondItem="Tw8-Ff-SZk" secondAttribute="trailing" constant="3" id="5Og-39-cbR"/>
-                            <constraint firstItem="kkI-GI-5Jp" firstAttribute="top" secondItem="keZ-iy-ImW" secondAttribute="bottom" constant="3" id="AWw-5m-b9a"/>
+                            <constraint firstItem="Tw8-Ff-SZk" firstAttribute="top" secondItem="WVT-ue-1Mm" secondAttribute="bottom" constant="10" id="3Sv-j0-mRT"/>
+                            <constraint firstItem="3Iy-sQ-tO2" firstAttribute="top" secondItem="EC2-hz-yaB" secondAttribute="bottom" constant="10" id="4uZ-x2-aKM"/>
+                            <constraint firstItem="EC2-hz-yaB" firstAttribute="leading" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="14" id="5jk-zv-2an"/>
+                            <constraint firstItem="eNx-Q2-3qe" firstAttribute="top" secondItem="3Iy-sQ-tO2" secondAttribute="bottom" constant="10" id="6GB-S3-aY3"/>
+                            <constraint firstItem="kkI-GI-5Jp" firstAttribute="top" secondItem="keZ-iy-ImW" secondAttribute="bottom" constant="10" id="AWw-5m-b9a"/>
+                            <constraint firstItem="EC2-hz-yaB" firstAttribute="leading" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="4" id="Ch6-Qr-DWz"/>
                             <constraint firstItem="Tw8-Ff-SZk" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="48" id="Cjp-eX-FDt"/>
+                            <constraint firstItem="3Iy-sQ-tO2" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="DaH-Ng-x33"/>
                             <constraint firstItem="sbh-49-5ol" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" id="DrA-n3-8ZY"/>
+                            <constraint firstItem="EC2-hz-yaB" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="EWd-Yp-xun"/>
                             <constraint firstItem="vVL-VW-afz" firstAttribute="top" secondItem="sbh-49-5ol" secondAttribute="bottom" constant="11" id="Ejl-63-vF0"/>
                             <constraint firstItem="lA2-O8-x7a" firstAttribute="top" secondItem="sbh-49-5ol" secondAttribute="bottom" constant="7" id="GgB-kS-1gx"/>
                             <constraint firstItem="WVT-ue-1Mm" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="12" id="Gy5-Fk-0aj"/>
                             <constraint firstItem="kkI-GI-5Jp" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="9" id="Heh-h4-pYq"/>
-                            <constraint firstItem="wzS-iu-dFN" firstAttribute="top" secondItem="00X-Ud-cFP" secondAttribute="bottom" constant="18" id="V51-K0-LbR"/>
-                            <constraint firstItem="cD0-Rd-hbK" firstAttribute="leading" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="3" id="Wp5-4r-pRe"/>
-                            <constraint firstItem="keZ-iy-ImW" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" id="YVp-CA-Anz"/>
+                            <constraint firstItem="EC2-hz-yaB" firstAttribute="top" secondItem="G17-R9-GfR" secondAttribute="bottom" constant="8" id="KyX-N5-4rA"/>
+                            <constraint firstItem="keZ-iy-ImW" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" constant="10" id="YVp-CA-Anz"/>
                             <constraint firstItem="vVL-VW-afz" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="12" id="bCz-TN-fgI"/>
                             <constraint firstItem="lA2-O8-x7a" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="48" id="cJu-wE-FtC"/>
-                            <constraint firstItem="WVT-ue-1Mm" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" id="dWM-t2-bTQ"/>
+                            <constraint firstItem="3Iy-sQ-tO2" firstAttribute="leading" secondItem="keZ-iy-ImW" secondAttribute="trailing" constant="14" id="dMp-FU-FVP"/>
+                            <constraint firstItem="WVT-ue-1Mm" firstAttribute="top" secondItem="vVL-VW-afz" secondAttribute="bottom" constant="10" id="dWM-t2-bTQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="7" id="dt1-Tm-ijt"/>
-                            <constraint firstItem="00X-Ud-cFP" firstAttribute="top" secondItem="cD0-Rd-hbK" secondAttribute="bottom" constant="17" id="f40-yB-xoI"/>
+                            <constraint firstItem="eNx-Q2-3qe" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="eTa-14-j9g"/>
+                            <constraint firstItem="EC2-hz-yaB" firstAttribute="leading" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="4" id="fh1-Cc-wHs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="keZ-iy-ImW" secondAttribute="trailing" constant="7" id="fqm-Cg-gYJ"/>
-                            <constraint firstItem="cD0-Rd-hbK" firstAttribute="top" secondItem="G17-R9-GfR" secondAttribute="bottom" constant="12" id="jld-3O-cfZ"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="10" id="ksX-AH-dF0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lA2-O8-x7a" secondAttribute="trailing" constant="7" id="ldg-p9-Ipz"/>
-                            <constraint firstItem="00X-Ud-cFP" firstAttribute="leading" secondItem="keZ-iy-ImW" secondAttribute="trailing" constant="3" id="nlw-A7-61F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cD0-Rd-hbK" secondAttribute="trailing" constant="8" id="o4i-fJ-tn9"/>
                             <constraint firstItem="sbh-49-5ol" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="pog-Ji-KK2"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="qdc-x5-Mw9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="00X-Ud-cFP" secondAttribute="trailing" constant="8" id="sbf-Uq-Ifl"/>
+                            <constraint firstItem="eNx-Q2-3qe" firstAttribute="leading" secondItem="Tw8-Ff-SZk" secondAttribute="trailing" constant="14" id="uHu-lI-rNX"/>
                             <constraint firstItem="keZ-iy-ImW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="48" id="x4O-e7-pCl"/>
                             <constraint firstItem="G17-R9-GfR" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="yLn-ZH-RoS"/>
                         </constraints>
@@ -150,6 +150,8 @@
                                 <exclude reference="dt1-Tm-ijt"/>
                                 <exclude reference="ldg-p9-Ipz"/>
                                 <exclude reference="fqm-Cg-gYJ"/>
+                                <exclude reference="Ch6-Qr-DWz"/>
+                                <exclude reference="fh1-Cc-wHs"/>
                             </mask>
                         </variation>
                         <connections>
@@ -159,14 +161,14 @@
                     </view>
                     <connections>
                         <outlet property="LabelExp" destination="kkI-GI-5Jp" id="AXH-fY-y3m"/>
-                        <outlet property="LabelExpval" destination="wzS-iu-dFN" id="obz-Xk-PGq"/>
                         <outlet property="LabelX" destination="vVL-VW-afz" id="SZi-FS-5kw"/>
-                        <outlet property="LabelXval" destination="cD0-Rd-hbK" id="oLf-sc-iDm"/>
                         <outlet property="LabelY" destination="WVT-ue-1Mm" id="2fO-yr-F8G"/>
-                        <outlet property="LabelYval" destination="00X-Ud-cFP" id="qO0-XB-w4y"/>
                         <outlet property="SliderExp" destination="Tw8-Ff-SZk" id="NBr-P1-1id"/>
                         <outlet property="SliderX" destination="lA2-O8-x7a" id="IZd-ab-mRq"/>
                         <outlet property="SliderY" destination="keZ-iy-ImW" id="Th0-zq-5zl"/>
+                        <outlet property="TextExp" destination="eNx-Q2-3qe" id="2Ro-yd-HlM"/>
+                        <outlet property="TextX" destination="EC2-hz-yaB" id="Dw6-fn-Qia"/>
+                        <outlet property="TextY" destination="3Iy-sQ-tO2" id="95T-Xa-Vh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -217,8 +219,8 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-f1-Spr">
                                 <rect key="frame" x="20" y="215" width="560" height="213"/>
-                                <mutableString key="text">Starting X is always 0, which gets squared and then A, which is a variable (imaginary number) is added. After this, the resulting value is then plugged back into the function to go through the same process again. Points that stay below a magnitude of 2 are trapped, but the other ones will have a magnitude larger than 2 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color shade determines how fast the point escapes. You repeat this process with different A values.  
-</mutableString>
+                                <string key="text">Starting X is always 0, which gets squared and then A, which is a variable (imaginary number) is added. After this, the resulting value is then plugged back into the function to go through the same process again. Points that stay below a magnitude of 2 are trapped, but the other ones will have a magnitude larger than 2 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color shade determines how fast the point escapes. You repeat this process with different A values.  
+</string>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -363,9 +365,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRb-WE-m9n">
                                 <rect key="frame" x="20" y="236" width="560" height="213"/>
-                                <mutableString key="text">Y is the variable that gets squared in the equation in this instance and C is the constant. The output of the equation is then inputted back into the equation and the process is repeated. Depending on what value of C is chosen the fractal created will be different. 
+                                <string key="text">Y is the variable that gets squared in the equation in this instance and C is the constant. The output of the equation is then inputted back into the equation and the process is repeated. Depending on what value of C is chosen the fractal created will be different. 
 Points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -461,9 +463,9 @@ Points that stay within a magnitude of 1 are trapped, but the other ones will ha
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-I0-BKQ">
                                 <rect key="frame" x="20" y="215" width="560" height="281"/>
-                                <mutableString key="text">The Sierpinski version of the Julia set starts of the same with Y having the same role of being the variable that is squared in the first half of the equation. But in this set the C variable is divided by Y^A (A is also controled by the user), so the fractal changes based on the A value as well. Similiarly to the Julia set points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
+                                <string key="text">The Sierpinski version of the Julia set starts of the same with Y having the same role of being the variable that is squared in the first half of the equation. But in this set the C variable is divided by Y^A (A is also controled by the user), so the fractal changes based on the A value as well. Similiarly to the Julia set points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -581,7 +583,7 @@ Points that stay within a magnitude of 1 are trapped, but the other ones will ha
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rld-X7-5Kb"/>
         <segue reference="ruz-EP-c32"/>
+        <segue reference="dry-KW-QUr"/>
     </inferredMetricsTieBreakers>
 </document>

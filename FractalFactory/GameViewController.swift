@@ -17,9 +17,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var LabelX: UILabel!
     @IBOutlet weak var LabelY: UILabel!
     @IBOutlet weak var LabelExp: UILabel!
-    @IBOutlet weak var LabelXval: UILabel!
-    @IBOutlet weak var LabelYval: UILabel!
-    @IBOutlet weak var LabelExpval: UILabel!
+    
+    @IBOutlet weak var TextX: UITextField!
+    @IBOutlet weak var TextY: UITextField!
+    @IBOutlet weak var TextExp: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +40,23 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
+        
         if shaderfile == "juliaset.fsh" || shaderfile == "sierpinski.fsh"  || shaderfile == "Simple.fsh" {
             SliderX.hidden = false
             SliderY.hidden = false
             LabelX.hidden = false
             LabelY.hidden = false
-            LabelXval.hidden = false
-            LabelYval.hidden = false
+            TextY.hidden = false
+            TextX.hidden = false
   
             if shaderfile == "sierpinski.fsh" || shaderfile == "Simple.fsh" {
                 SliderExp.hidden = false
                 LabelExp.hidden = false
-                LabelExpval.hidden = false
+                TextExp.hidden = false
             } else {
                 SliderExp.hidden = true
                 LabelExp.hidden = true
-                LabelExpval.hidden = true
+                TextExp.hidden = true
             }
         } else {
             SliderX.hidden = true
@@ -62,37 +64,56 @@ class GameViewController: UIViewController {
             SliderExp.hidden = true
             LabelX.hidden = true
             LabelY.hidden = true
-            LabelXval.hidden = true
-            LabelYval.hidden = true
+            TextY.hidden = true
             LabelExp.hidden = true
-            LabelExpval.hidden = true
-            print("Here 3")
+            TextExp.hidden = true
+            TextX.hidden = true
         }
         
-        LabelXval.text = String(SliderX.value)
-        LabelYval.text = String(SliderY.value)
-        LabelExpval.text = String(SliderExp.value)
+        TextY.text = String(SliderY.value)
+        TextExp.text = String(SliderExp.value)
         xslider.floatValue = SliderX.value
         yslider.floatValue = SliderY.value
         expslider.floatValue = SliderExp.value
+        TextX.text = String(SliderX.value)
         
     }
     
     
     @IBAction func Xslider(sender: UISlider) {
         xslider.floatValue = Float(sender.value)
-        LabelXval.text = String(sender.value)
+        TextX.text = String(sender.value)
     }
     
     @IBAction func Yslider(sender: UISlider) {
         yslider.floatValue = Float(sender.value)
-        LabelYval.text = String(sender.value)
+        TextY.text = String(sender.value)
     }
     
     @IBAction func Expslider(sender: UISlider) {
         expslider.floatValue = Float(sender.value)
-        LabelExpval.text = String(sender.value)
+        TextExp.text = String(sender.value)
     }
+    
+    
+    
+    @IBAction func Xtextbox(sender: UITextField) {
+        xslider.floatValue = Float(sender.text!)!
+        SliderX.value = xslider.floatValue
+    }
+    
+    @IBAction func Ytextbox(sender: UITextField) {
+        yslider.floatValue = Float(sender.text!)!
+        SliderY.value = yslider.floatValue
+
+    }
+    
+    @IBAction func Exptextbox(sender: UITextField) {
+        expslider.floatValue = Float(sender.text!)!
+        SliderExp.value = expslider.floatValue
+
+    }
+    
     
     // doing the zooming by pinching
     // as being pinched, use the diff from previous to do incremental zooming
@@ -123,21 +144,43 @@ class GameViewController: UIViewController {
         
         xslider.floatValue = 0.32
         SliderX.value = 0.32
-        LabelXval.text = String(0.32)
+        TextX.text = String(0.32)
         
         yslider.floatValue = 0.44
         SliderY.value = 0.44
-        LabelYval.text = String(0.44)
+        TextY.text = String(0.44)
         
         expslider.floatValue = 0.0
         SliderExp.value = 0.0
-        LabelExpval.text = String(0.0)
+        TextExp.text = String(0.0)
     }
     
     @IBAction func gotoHelp(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier(helpview) as UIViewController
         self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    
+    // Check for negative or positive decimal value
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (string.characters.count == 0) {
+            return true
+        }
+        
+        var acceptable : String = ".0123456789"
+        if(textField.text!.isEmpty) {
+            acceptable = "-.0123456789"
+        } else if (textField.text! as NSString).containsString(".") {
+            acceptable = "0123456789"
+        }
+       
+        let cs = NSCharacterSet(charactersInString: acceptable)
+        let filtered = string.componentsSeparatedByCharactersInSet(cs).filter {  !$0.isEmpty }
+        let str = filtered.joinWithSeparator("")
+            
+        return (string != str)
+
     }
     
 
