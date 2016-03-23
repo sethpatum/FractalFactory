@@ -219,7 +219,7 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-f1-Spr">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-f1-Spr">
                                 <rect key="frame" x="20" y="215" width="560" height="213"/>
                                 <string key="text">Starting X is always 0, which gets squared and then A, which is a variable (imaginary number) is added. After this, the resulting value is then plugged back into the function to go through the same process again. Points that stay below a magnitude of 2 are trapped, but the other ones will have a magnitude larger than 2 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color shade determines how fast the point escapes. You repeat this process with different A values.  
 </string>
@@ -244,6 +244,7 @@
                         <constraints>
                             <constraint firstItem="3bd-Dz-EeQ" firstAttribute="top" secondItem="SoE-9m-OAC" secondAttribute="bottom" constant="85" id="UO0-YV-y5j"/>
                             <constraint firstItem="Eqz-f1-Spr" firstAttribute="trailing" secondItem="phx-NP-F2w" secondAttribute="trailingMargin" id="W3K-Bt-7n9"/>
+                            <constraint firstItem="Z5I-Tf-PJ0" firstAttribute="top" secondItem="Eqz-f1-Spr" secondAttribute="bottom" id="dFX-tb-Wv5"/>
                             <constraint firstItem="JAM-fo-hy6" firstAttribute="top" secondItem="SoE-9m-OAC" secondAttribute="bottom" constant="74" id="h5r-8o-CW2"/>
                             <constraint firstItem="Eqz-f1-Spr" firstAttribute="leading" secondItem="phx-NP-F2w" secondAttribute="leadingMargin" id="j73-6p-kOG"/>
                             <constraint firstItem="Eqz-f1-Spr" firstAttribute="top" secondItem="3bd-Dz-EeQ" secondAttribute="bottom" constant="8" id="jU9-08-XzK"/>
@@ -365,7 +366,7 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRb-WE-m9n">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SRb-WE-m9n">
                                 <rect key="frame" x="20" y="236" width="560" height="213"/>
                                 <string key="text">Y is the variable that gets squared in the equation in this instance and C is the constant. The output of the equation is then inputted back into the equation and the process is repeated. Depending on what value of C is chosen the fractal created will be different. 
 Points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
@@ -392,8 +393,9 @@ Points that stay within a magnitude of 1 are trapped, but the other ones will ha
                             <constraint firstItem="SRb-WE-m9n" firstAttribute="leading" secondItem="h6j-zQ-4LO" secondAttribute="leadingMargin" id="6Y4-jq-OrK"/>
                             <constraint firstItem="SRb-WE-m9n" firstAttribute="trailing" secondItem="h6j-zQ-4LO" secondAttribute="trailingMargin" id="RID-dB-iVi"/>
                             <constraint firstItem="IZo-fu-7xc" firstAttribute="top" secondItem="CAF-YA-Aah" secondAttribute="bottom" constant="75.5" id="VUS-Wz-yyv"/>
+                            <constraint firstItem="YVb-fw-yLl" firstAttribute="top" secondItem="SRb-WE-m9n" secondAttribute="bottom" id="Yd1-zL-QGE"/>
                             <constraint firstItem="v0N-xw-qI5" firstAttribute="top" secondItem="CAF-YA-Aah" secondAttribute="bottom" constant="64" id="c2K-B1-WUz"/>
-                            <constraint firstItem="SRb-WE-m9n" firstAttribute="top" secondItem="IZo-fu-7xc" secondAttribute="bottom" constant="24.5" id="lHk-T4-gn1"/>
+                            <constraint firstItem="SRb-WE-m9n" firstAttribute="top" secondItem="IZo-fu-7xc" secondAttribute="bottom" id="lHk-T4-gn1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -463,7 +465,7 @@ Points that stay within a magnitude of 1 are trapped, but the other ones will ha
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-I0-BKQ">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-I0-BKQ">
                                 <rect key="frame" x="20" y="215" width="560" height="281"/>
                                 <string key="text">The Sierpinski version of the Julia set starts of the same with Y having the same role of being the variable that is squared in the first half of the equation. But in this set the C variable is divided by Y^A (A is also controled by the user), so the fractal changes based on the A value as well. Similiarly to the Julia set points that stay within a magnitude of 1 are trapped, but the other ones will have a magnitude larger 1 after many iterations, which means they escaped. Depending on the starting point values, the result will either escape(colorful) or become trapped at a value(black). The color  shade determines how fast the point escapes.
 
@@ -585,7 +587,7 @@ Points that stay within a magnitude of 1 are trapped, but the other ones will ha
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ruz-EP-c32"/>
-        <segue reference="dry-KW-QUr"/>
+        <segue reference="sHC-Gx-YrD"/>
+        <segue reference="Rld-X7-5Kb"/>
     </inferredMetricsTieBreakers>
 </document>
