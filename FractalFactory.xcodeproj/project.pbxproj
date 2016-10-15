@@ -224,13 +224,19 @@
 				TargetAttributes = {
 					F2C4C16F1C75470A0003B54E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 66YNRJ6GN4;
+						LastSwiftMigration = 0800;
 					};
 					F2C4C1871C75470A0003B54E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 66YNRJ6GN4;
+						LastSwiftMigration = 0800;
 						TestTargetID = F2C4C16F1C75470A0003B54E;
 					};
 					F2C4C1921C75470A0003B54E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 66YNRJ6GN4;
+						LastSwiftMigration = 0800;
 						TestTargetID = F2C4C16F1C75470A0003B54E;
 					};
 				};
@@ -442,11 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = "$(SRCROOT)/FractalFactory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = seth.FractalFactory;
 				PRODUCT_NAME = FractalFactory;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,11 +465,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = "$(SRCROOT)/FractalFactory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = seth.FractalFactory;
 				PRODUCT_NAME = FractalFactory;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -471,10 +481,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = first_gameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MIT.first-gameTests";
 				PRODUCT_NAME = FractalFactory;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FractalFactory.app/FractalFactory";
 			};
 			name = Debug;
@@ -483,10 +495,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = first_gameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MIT.first-gameTests";
 				PRODUCT_NAME = FractalFactory;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FractalFactory.app/FractalFactory";
 			};
 			name = Release;
@@ -495,10 +509,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = first_gameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MIT.first-gameUITests";
 				PRODUCT_NAME = FractalFactory;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = first_game;
 				USES_XCTRUNNER = YES;
 			};
@@ -507,10 +523,12 @@
 		F2C4C1A41C75470A0003B54E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 66YNRJ6GN4;
 				INFOPLIST_FILE = first_gameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MIT.first-gameUITests";
 				PRODUCT_NAME = FractalFactory;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = first_game;
 				USES_XCTRUNNER = YES;
 			};

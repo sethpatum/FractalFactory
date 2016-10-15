@@ -54,9 +54,9 @@ void main() {
         }
         
         if (it < iterations) {
-            color.x = sin(it / 3.0);
-            color.y = cos(it / 6.0);
-            color.z = cos(it / 12.0 + 3.14 / 4.0);
+            color.x = sin(float(it) / 3.0);
+            color.y = cos(float(it) / 6.0);
+            color.z = cos(float(it) / 12.0 + 3.14 / 4.0);
         }
     }
     
